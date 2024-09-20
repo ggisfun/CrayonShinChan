@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23077.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23068.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--蠟筆小新劇場版-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CrayonViewController" customModule="CrayonShinChan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background01" translatesAutoresizingMaskIntoConstraints="NO" id="L4l-eR-vur">
+                                <rect key="frame" x="0.0" y="156" width="393" height="696"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L4l-eR-vur" secondAttribute="height" multiplier="131:232" id="Fpe-wW-AXq"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lpu-st-ndE">
+                                <rect key="frame" x="0.0" y="36" width="393" height="540"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lpu-st-ndE" secondAttribute="height" multiplier="131:180" id="i8B-af-S0B"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="f3X-6X-b2t" customClass="CrayonCollectionViewLayout" customModule="CrayonShinChan" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CrayonCollectionViewCell" id="KXO-aK-p7k" customClass="CrayonCollectionViewCell" customModule="CrayonShinChan" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="0.0" width="267" height="441"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="izT-WM-6PO">
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="441"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SW6-7c-fYY">
+                                                    <rect key="frame" x="0.0" y="62" width="267" height="379"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbc-Ca-Qd6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="267" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="52" id="MHD-3f-a9O"/>
+                                                    </constraints>
+                                                    <string key="text">Label
+Label</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                                    <color key="textColor" systemColor="systemIndigoColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="SW6-7c-fYY" secondAttribute="bottom" id="8AJ-Yi-ekS"/>
+                                                <constraint firstItem="Tbc-Ca-Qd6" firstAttribute="top" secondItem="izT-WM-6PO" secondAttribute="top" id="GmS-Xk-Wmf"/>
+                                                <constraint firstItem="SW6-7c-fYY" firstAttribute="top" secondItem="Tbc-Ca-Qd6" secondAttribute="bottom" constant="10" id="aYe-Xa-CeR"/>
+                                                <constraint firstItem="SW6-7c-fYY" firstAttribute="leading" secondItem="izT-WM-6PO" secondAttribute="leading" id="etd-Ox-NSC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tbc-Ca-Qd6" secondAttribute="trailing" id="gKL-h0-8YW"/>
+                                                <constraint firstItem="Tbc-Ca-Qd6" firstAttribute="leading" secondItem="izT-WM-6PO" secondAttribute="leading" id="mhD-mQ-8Va"/>
+                                                <constraint firstAttribute="trailing" secondItem="SW6-7c-fYY" secondAttribute="trailing" id="vlS-PT-Zy3"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="267" height="441"/>
+                                        <connections>
+                                            <outlet property="movieImageView" destination="SW6-7c-fYY" id="1R5-nZ-Szh"/>
+                                            <outlet property="movieNameLabel" destination="Tbc-Ca-Qd6" id="uHg-Js-Xyd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Vda-JO-lYO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nMg-aR-yBT"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="L4l-eR-vur" secondAttribute="bottom" id="2nQ-VR-VaZ"/>
+                            <constraint firstItem="lpu-st-ndE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3bJ-vH-MvA"/>
+                            <constraint firstAttribute="bottom" secondItem="L4l-eR-vur" secondAttribute="bottom" id="GBI-u7-iEL"/>
+                            <constraint firstAttribute="trailing" secondItem="L4l-eR-vur" secondAttribute="trailing" id="Nd8-cD-D6V"/>
+                            <constraint firstItem="L4l-eR-vur" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V7x-Uv-gUb"/>
+                            <constraint firstItem="L4l-eR-vur" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cbI-d0-Jgo"/>
+                            <constraint firstItem="lpu-st-ndE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="36" id="uXi-Sa-LxA"/>
+                            <constraint firstItem="lpu-st-ndE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vOR-te-O8e"/>
+                            <constraint firstItem="L4l-eR-vur" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z4A-fX-ECa"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="蠟筆小新劇場版" id="nmw-sV-PEz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="715.26717557251902" y="12.67605633802817"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background01" width="1500" height="2655"/>
+        <namedColor name="Color">
+            <color red="0.71372549019607845" green="0.85098039215686272" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
